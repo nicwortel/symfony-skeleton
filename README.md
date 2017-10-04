@@ -15,3 +15,7 @@ Run `make` to install dependencies.
 ### Running the tests
 
 Run `make test` to execute all available tests.
+
+## Building a deployable artifact
+
+`make dist` will create a tarball that can be deployed to a server.
