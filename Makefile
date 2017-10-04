@@ -26,6 +26,7 @@ test: lint static-analysis unit-tests integration-tests coding-standards securit
 lint: vendor
 	vendor/bin/parallel-lint $(sources)
 	bin/console lint:yaml config/
+	bin/console lint:twig templates/
 
 static-analysis: vendor
 	vendor/bin/phpstan analyse --level=7 src/
