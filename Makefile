@@ -16,6 +16,7 @@ static-analysis: vendor
 
 coding-standards: vendor
 	vendor/bin/phpcs -p --colors
+	vendor/bin/phpmd src/ text phpmd.xml
 
 .PHONY: clean
 clean:
