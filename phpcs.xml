@@ -7,4 +7,13 @@
     <file>src/</file>
 
     <rule ref="PSR2"/>
+
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+    <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/DeclareStrictTypesSniff.php">
+        <properties>
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="1" />
+            <property name="spacesCountAroundEqualsSign" value="0" />
+        </properties>
+    </rule>
 </ruleset>
