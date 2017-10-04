@@ -7,6 +7,7 @@ vendor: composer.json composer.lock
 .PHONY: lint
 lint: vendor
 	vendor/bin/parallel-lint bin/console config/ public/ src/
+	bin/console lint:yaml config/
 
 .PHONY: clean
 clean:
