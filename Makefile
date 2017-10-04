@@ -1,4 +1,4 @@
-sources = bin/console config public src
+sources = bin/console config public src templates
 version = $(shell git describe --tags --dirty --always)
 build_name = application-$(version)
 build_dir = build/$(build_name)
