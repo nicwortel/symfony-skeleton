@@ -11,3 +11,7 @@ A short description of your project.
 ## Getting started
 
 Run `make` to install dependencies.
+
+### Running the tests
+
+Run `make test` to execute all available tests.
