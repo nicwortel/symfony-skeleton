@@ -4,8 +4,8 @@ all: vendor
 vendor: composer.json composer.lock
 	composer install
 
-.PHONY: test lint static-analysis
-test: lint static-analysis
+.PHONY: test lint static-analysis coding-standards
+test: lint static-analysis coding-standards
 
 lint: vendor
 	vendor/bin/parallel-lint bin/console config/ public/ src/
@@ -13,6 +13,9 @@ lint: vendor
 
 static-analysis: vendor
 	vendor/bin/phpstan analyse --level=7 src/
+
+coding-standards: vendor
+	vendor/bin/phpcs -p --colors
 
 .PHONY: clean
 clean:

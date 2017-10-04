@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset>
+    <config name="ignore_warnings_on_exit" value="1"/>
+
+    <file>config/</file>
+    <file>public/</file>
+    <file>src/</file>
+
+    <rule ref="PSR2"/>
+</ruleset>
