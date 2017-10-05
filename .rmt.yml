@@ -1,0 +1,15 @@
+vcs: git
+
+prerequisites:
+  - working-copy-check
+  - display-last-changes
+
+version-generator: semantic
+
+version-persister:
+  vcs-tag:
+    tag-prefix: 'v'
+
+post-release-actions:
+  vcs-publish:
+    ask-confirmation: true
