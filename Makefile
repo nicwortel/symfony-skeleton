@@ -24,8 +24,8 @@ release: test vendor
 .PHONY: dist
 dist: build/$(build_name).tar.gz
 
-.PHONY: test lint static-analysis unit-tests integration-tests coding-standards security-tests composer-validate
-test: lint static-analysis unit-tests integration-tests coding-standards security-tests composer-validate
+.PHONY: test lint static-analysis unit-tests integration-tests acceptance-tests coding-standards security-tests composer-validate
+test: lint static-analysis unit-tests integration-tests acceptance-tests coding-standards security-tests composer-validate
 
 lint: vendor
 	vendor/bin/parallel-lint $(sources)
@@ -40,6 +40,9 @@ unit-tests: vendor
 
 integration-tests: vendor
 	vendor/bin/phpunit --testsuite integration-tests
+
+acceptance-tests: vendor
+	vendor/bin/behat
 
 coding-standards: vendor
 	vendor/bin/phpcs -p --colors
