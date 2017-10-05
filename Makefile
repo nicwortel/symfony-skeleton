@@ -24,8 +24,8 @@ release: test vendor
 .PHONY: dist
 dist: build/$(build_name).tar.gz
 
-.PHONY: test lint static-analysis unit-tests integration-tests coding-standards security-tests
-test: lint static-analysis unit-tests integration-tests coding-standards security-tests
+.PHONY: test lint static-analysis unit-tests integration-tests coding-standards security-tests composer-validate
+test: lint static-analysis unit-tests integration-tests coding-standards security-tests composer-validate
 
 lint: vendor
 	vendor/bin/parallel-lint $(sources)
@@ -47,6 +47,9 @@ coding-standards: vendor
 
 security-tests: vendor
 	vendor/bin/security-checker security:check
+
+composer-validate:
+	composer validate --no-check-publish
 
 .PHONY: clean
 clean:
