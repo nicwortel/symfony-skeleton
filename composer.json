@@ -22,7 +22,8 @@
         "slevomat/coding-standard": "^4.0",
         "squizlabs/php_codesniffer": "^3.1",
         "symfony/dotenv": "^3.3",
-        "symfony/flex": "^1.0"
+        "symfony/flex": "^1.0",
+        "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "sort-packages": true
