@@ -1,4 +1,7 @@
-; top-most EditorConfig file
+; See http://editorconfig.org/
+; For PhpStorm, enable https://plugins.jetbrains.com/plugin/7294-editorconfig
+
+; This is the root EditorConfig file
 root = true
 
 [*]
