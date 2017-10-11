@@ -32,8 +32,9 @@ lint: vendor
 	bin/console lint:yaml config/
 	bin/console lint:twig templates/
 
-static-analysis: vendor
+static-analysis: vendor bin/deptrac.phar
 	vendor/bin/phpstan analyse --level=7 src/
+	bin/deptrac.phar analyze --formatter-graphviz=0
 
 unit-tests: vendor
 	vendor/bin/phpunit --testsuite unit-tests
@@ -53,6 +54,10 @@ security-tests: vendor
 
 composer-validate:
 	composer validate --no-check-publish
+
+bin/deptrac.phar:
+	curl -LS http://get.sensiolabs.de/deptrac.phar -o bin/deptrac.phar
+	chmod a+x bin/deptrac.phar
 
 .PHONY: clean
 clean:

@@ -1,4 +1,5 @@
 /.env
+/bin/deptrac.phar
 /build/
 /public/bundles/
 /var/
