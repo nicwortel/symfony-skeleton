@@ -8,7 +8,6 @@ use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Vendor\Project\Infrastructure\Symfony\Kernel;
 
-umask(0000);
 set_time_limit(0);
 
 require __DIR__.'/../vendor/autoload.php';
@@ -25,8 +24,12 @@ $input = new ArgvInput();
 $env = $input->getParameterOption(['--env', '-e'], $_SERVER['APP_ENV'] ?? 'dev');
 $debug = ($_SERVER['APP_DEBUG'] ?? true) !== '0' && !$input->hasParameterOption(['--no-debug', '']);
 
-if ($debug && class_exists(Debug::class)) {
-    Debug::enable();
+if ($debug) {
+    umask(0000);
+
+    if (class_exists(Debug::class)) {
+        Debug::enable();
+    }
 }
 
 $kernel = new Kernel($env, $debug);
