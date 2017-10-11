@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build: docker/nginx
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html
+
+  php:
+    image: php:7.0-fpm
+    volumes:
+      - .:/var/www/html
