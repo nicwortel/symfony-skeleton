@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-use App\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
+use Vendor\Project\Infrastructure\Symfony\Kernel;
 
 require __DIR__.'/../vendor/autoload.php';
 

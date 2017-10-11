@@ -9,4 +9,4 @@ default:
     Behat\Symfony2Extension:
       kernel:
         bootstrap: features/bootstrap/bootstrap.php
-        class: App\Kernel
+        class: Vendor\Project\Infrastructure\Symfony\Kernel
