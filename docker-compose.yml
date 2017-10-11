@@ -9,6 +9,6 @@ services:
       - .:/var/www/html
 
   php:
-    image: php:7.0-fpm
+    build: docker/php-fpm
     volumes:
       - .:/var/www/html
