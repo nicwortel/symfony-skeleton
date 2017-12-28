@@ -5,11 +5,11 @@
     "license": "proprietary",
     "require": {
         "php": "^7.1",
-        "symfony/console": "^3.3",
-        "symfony/framework-bundle": "^3.3",
+        "symfony/console": "^4.0",
+        "symfony/framework-bundle": "^4.0",
         "symfony/monolog-bundle": "^3.1",
-        "symfony/twig-bundle": "^3.3",
-        "symfony/yaml": "^3.3"
+        "symfony/twig-bundle": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
         "behat/behat": "^3.4",
@@ -23,7 +23,7 @@
         "sensiolabs/security-checker": "^4.1",
         "slevomat/coding-standard": "^4.0",
         "squizlabs/php_codesniffer": "^3.1",
-        "symfony/dotenv": "^3.3",
+        "symfony/dotenv": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/profiler-pack": "^1.0"
     },
