@@ -23,6 +23,9 @@
     "container-interop/container-interop": {
         "version": "1.2.0"
     },
+    "dealerdirect/phpcodesniffer-composer-installer": {
+        "version": "v0.4.4"
+    },
     "doctrine/instantiator": {
         "version": "1.1.0"
     },
@@ -67,6 +70,9 @@
     },
     "nette/utils": {
         "version": "v2.4.8"
+    },
+    "nicwortel/coding-standard": {
+        "version": "dev-master"
     },
     "nikic/php-parser": {
         "version": "v3.1.2"
@@ -183,7 +189,7 @@
         }
     },
     "slevomat/coding-standard": {
-        "version": "4.0.0"
+        "version": "4.3.0"
     },
     "squizlabs/php_codesniffer": {
         "version": "3.1.1"
