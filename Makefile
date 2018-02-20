@@ -50,7 +50,10 @@ coding-standards: vendor
 	vendor/bin/phpmd src/ text phpmd.xml
 
 security-tests: vendor
-	vendor/bin/security-checker security:check
+#	Downgrading to HTTP is a temporary workaround that should be removed once TLS is supported on Travis
+#	See https://github.com/travis-ci/travis-ci/issues/6339
+#	and https://github.com/sensiolabs/security-checker/pull/77#issuecomment-290733113
+	vendor/bin/security-checker security:check --end-point=http://security.sensiolabs.org/check_lock
 
 composer-validate:
 	composer validate --no-check-publish
