@@ -38,7 +38,8 @@
     "autoload-dev": {
         "psr-4": {
             "Vendor\\Project\\Tests\\Unit\\": "tests/unit/",
-            "Vendor\\Project\\Tests\\Integration\\": "tests/integration/"
+            "Vendor\\Project\\Tests\\Integration\\": "tests/integration/",
+            "Vendor\\Project\\Tests\\Acceptance\\": "tests/acceptance/"
         }
     },
     "scripts": {

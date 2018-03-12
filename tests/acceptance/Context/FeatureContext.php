@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Vendor\Project\Tests\Acceptance\Context;
+
 use Behat\Behat\Context\Context;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
