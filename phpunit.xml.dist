@@ -12,8 +12,9 @@
         <ini name="error_reporting" value="-1"/>
         <env name="KERNEL_CLASS" value="Vendor\Project\Infrastructure\Symfony\Kernel"/>
         <env name="APP_ENV" value="test"/>
-        <env name="APP_DEBUG" value="1"/>
-        <env name="APP_SECRET" value="s$cretf0rt3st"/>
+        <env name="APP_SECRET" value="70e03e5251c725a109ec7306a3802324"/>
+        <!-- env name="TRUSTED_PROXIES" value="127.0.0.1,127.0.0.2" -->
+        <!-- env name="TRUSTED_HOSTS" value="localhost,example.com" -->
         <!-- define your env variables for the test env here -->
     </php>
 
