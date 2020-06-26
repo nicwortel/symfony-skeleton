@@ -16,7 +16,7 @@
         "behat/symfony2-extension": "^2.1",
         "jakub-onderka/php-console-highlighter": "^0.3.2",
         "jakub-onderka/php-parallel-lint": "^0.9.2",
-        "nicwortel/coding-standard": "dev-master",
+        "nicwortel/coding-standard": "^1.1",
         "phpmd/phpmd": "^2.6",
         "phpstan/phpstan": "^0.9.1",
         "phpunit/phpunit": "^6.3",
