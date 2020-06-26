@@ -4,7 +4,7 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": "^7.1",
+        "php": "^7.4",
         "symfony/console": "^4.0",
         "symfony/framework-bundle": "^4.0",
         "symfony/monolog-bundle": "^3.1",
