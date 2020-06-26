@@ -1,0 +1,7 @@
+parameters:
+    paths:
+        - bin/console
+        - config
+        - public
+        - src
+    level: max

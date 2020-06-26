@@ -29,7 +29,7 @@ lint: vendor
 	bin/console lint:twig templates/
 
 static-analysis: vendor bin/deptrac.phar
-	vendor/bin/phpstan analyse --level=7 src/
+	vendor/bin/phpstan analyse
 	bin/deptrac.phar analyze --formatter-graphviz=0
 
 unit-tests: vendor
