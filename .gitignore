@@ -1,6 +1,2 @@
-/.env
-/bin/deptrac.phar
-/build/
-/public/bundles/
-/var/
-/vendor/
+/.phpcs-cache
+/.phpunit.result.cache

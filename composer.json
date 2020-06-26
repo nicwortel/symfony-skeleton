@@ -47,6 +47,7 @@
     },
     "scripts": {
         "auto-scripts": {
+            "./setup.sh": "script",
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
             "security-checker security:check": "script"
