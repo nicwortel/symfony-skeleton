@@ -1,14 +1,8 @@
 version: '3'
 
 services:
-  web:
-    build: docker/nginx
-    ports:
-      - 80:80
+  app:
+    build: .
     volumes:
-      - .:/var/www/html
-
-  php:
-    build: docker/php-fpm
-    volumes:
-      - .:/var/www/html
+      - .:/var/www/app
+      - ./etc/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro
