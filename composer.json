@@ -5,28 +5,33 @@
     "license": "proprietary",
     "require": {
         "php": "^7.4",
-        "symfony/console": "^4.0",
-        "symfony/framework-bundle": "^4.0",
-        "symfony/monolog-bundle": "^3.1",
-        "symfony/twig-bundle": "^4.0",
-        "symfony/yaml": "^4.0"
+        "symfony/console": "5.1.*",
+        "symfony/framework-bundle": "5.1.*",
+        "symfony/monolog-bundle": "^3.5",
+        "symfony/twig-bundle": "5.1.*",
+        "symfony/yaml": "5.1.*"
     },
     "require-dev": {
-        "behat/behat": "^3.4",
-        "jakub-onderka/php-console-highlighter": "^0.3.2",
-        "jakub-onderka/php-parallel-lint": "^0.9.2",
+        "behat/behat": "^3.7",
+        "jakub-onderka/php-console-highlighter": "^0.4.0",
+        "jakub-onderka/php-parallel-lint": "^1.0",
         "nicwortel/coding-standard": "^1.1",
-        "phpmd/phpmd": "^2.6",
+        "phpmd/phpmd": "^2.8",
         "phpstan/phpstan": "^0.12.31",
-        "phpunit/phpunit": "^6.3",
+        "phpunit/phpunit": "^9.2",
         "sensiolabs/security-checker": "^6.0",
-        "squizlabs/php_codesniffer": "^3.1",
-        "symfony/dotenv": "^4.0",
+        "squizlabs/php_codesniffer": "^3.5",
+        "symfony/dotenv": "5.1.*",
         "symfony/flex": "^1.0",
         "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "symfony": {
+            "require": "5.1.*"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -43,7 +48,7 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
             "security-checker security:check": "script"
         },
         "post-install-cmd": [
