@@ -24,7 +24,6 @@ dist: build/$(build_name).tar.gz
 test: lint static-analysis unit-tests integration-tests acceptance-tests coding-standards security-tests composer-validate
 
 lint: vendor
-	vendor/bin/parallel-lint $(sources)
 	bin/console lint:yaml config/
 	bin/console lint:twig templates/
 
