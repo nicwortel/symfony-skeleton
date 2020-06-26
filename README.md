@@ -16,8 +16,6 @@ Run `make` to install dependencies.
 
 Run `make test` to execute all available tests.
 
-## Building and releasing a new version of the project
-
-To release a new version of the project, run `make release`.
+## Building the application
 
 `make dist` will create a tarball that can be deployed to a server.

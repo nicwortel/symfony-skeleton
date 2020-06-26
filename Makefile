@@ -17,10 +17,6 @@ build/$(build_name).tar.gz: $(sources) vendor
 	tar --create --gzip --directory=$(build_dir) --file=$@ $(sources) vendor
 	-rm -rf $(build_dir)
 
-.PHONY: release
-release: test vendor
-	vendor/bin/RMT release
-
 .PHONY: dist
 dist: build/$(build_name).tar.gz
 
