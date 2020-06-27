@@ -13,7 +13,7 @@
     },
     "require-dev": {
         "behat/behat": "^3.7",
-        "nicwortel/coding-standard": "^1.1",
+        "nicwortel/coding-standard": "^2.0",
         "phpmd/phpmd": "^2.8",
         "phpstan/phpstan": "^0.12.31",
         "phpstan/phpstan-symfony": "^0.12.6",
