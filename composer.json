@@ -1,7 +1,7 @@
 {
     "name": "nicwortel/symfony-skeleton",
-    "description": "Skeleton for Symfony Flex applications",
     "type": "project",
+    "description": "Skeleton for Symfony Flex applications",
     "license": "proprietary",
     "require": {
         "php": "^7.4",
@@ -45,17 +45,17 @@
         }
     },
     "scripts": {
-        "auto-scripts": {
-            "./setup.sh": "script",
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "security-checker security:check": "script"
-        },
         "post-install-cmd": [
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "auto-scripts": {
+            "./setup.sh": "script",
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
+        }
     }
 }
