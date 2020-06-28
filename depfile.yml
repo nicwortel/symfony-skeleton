@@ -4,16 +4,25 @@ paths:
 layers:
   - name: Domain
     collectors:
-      - type: className
-        regex: .*\\Domain\\.*
+      - type: directory
+        regex: src/Domain/.*
+
   - name: Application
     collectors:
-      - type: className
-        regex: .*\\Application\\.*
+      - type: directory
+        regex: src/Application/.*
+
   - name: Infrastructure
     collectors:
-      - type: className
-        regex: .*\\Infrastructure\\.*
+      - type: directory
+        regex: src/Infrastructure/.*
+      - type: bool
+        must:
+          - type: className
+            regex: .*\\.*
+        must_not:
+          - type: directory
+            regex: src/.*
 
 ruleset:
   Domain: ~
