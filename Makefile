@@ -20,8 +20,8 @@ build/$(build_name).tar.gz: $(sources) vendor
 .PHONY: dist
 dist: build/$(build_name).tar.gz
 
-.PHONY: test lint static-analysis unit-tests integration-tests acceptance-tests coding-standards security-tests composer-validate
-test: lint static-analysis unit-tests integration-tests acceptance-tests coding-standards security-tests composer-validate
+.PHONY: test lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
+test: lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
 
 lint: vendor
 	bin/console lint:yaml config/
@@ -38,7 +38,10 @@ integration-tests: vendor
 	vendor/bin/phpunit --testsuite integration-tests
 
 acceptance-tests: vendor
-	vendor/bin/behat
+	vendor/bin/behat -v --suite=acceptance
+
+system-tests: vendor
+	vendor/bin/behat -v --suite=system
 
 coding-standards: vendor
 	vendor/bin/phpcs -p --colors

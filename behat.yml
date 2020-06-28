@@ -1,4 +1,9 @@
 default:
   suites:
-    default:
+    acceptance:
+      contexts: []
+
+    system:
+      filters:
+        tags: '@system'
       contexts: []
