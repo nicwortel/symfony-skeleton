@@ -7,3 +7,10 @@ default:
       filters:
         tags: '@system'
       contexts: []
+
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://0.0.0.0:8000'
+      sessions:
+        default:
+          goutte: ~

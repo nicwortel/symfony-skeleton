@@ -6,3 +6,12 @@ services:
     volumes:
       - .:/var/www/app
       - ./etc/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro
+
+  app-test:
+    build: .
+    volumes:
+      - .:/var/www/app
+    environment:
+      APP_ENV: test
+    ports:
+      - 8000:80

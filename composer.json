@@ -14,6 +14,9 @@
     },
     "require-dev": {
         "behat/behat": "^3.7",
+        "behat/mink-goutte-driver": "^1.2",
+        "friends-of-behat/mink-browserkit-driver": "^1.4",
+        "friends-of-behat/mink-extension": "^2.4",
         "nicwortel/coding-standard": "^2.0",
         "phpmd/phpmd": "^2.8",
         "phpstan/phpstan": "^0.12.31",
@@ -41,7 +44,8 @@
         "psr-4": {
             "Vendor\\Project\\Tests\\Unit\\": "tests/unit/",
             "Vendor\\Project\\Tests\\Integration\\": "tests/integration/",
-            "Vendor\\Project\\Tests\\Acceptance\\": "tests/acceptance/"
+            "Vendor\\Project\\Tests\\Acceptance\\": "tests/acceptance/",
+            "Vendor\\Project\\Tests\\System\\": "tests/system/"
         }
     },
     "scripts": {
