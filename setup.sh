@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sed -i 's/App\\/Vendor\\Project\\Infrastructure\\/g' bin/console public/index.php config/routes.yaml
+sed -i 's/App\\/Vendor\\Project\\Infrastructure\\/g' bin/console public/index.php config/routes.yaml config/services.yaml
+sed -i 's/src\//src\/Infrastructure\//g' config/services.yaml
 
 mv src/Controller/ src/Infrastructure/Controller/
 
