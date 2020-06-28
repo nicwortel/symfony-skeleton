@@ -29,7 +29,7 @@ lint: vendor
 
 static-analysis: vendor bin/deptrac.phar
 	vendor/bin/phpstan analyse
-	bin/deptrac.phar analyze --formatter-graphviz=0
+	bin/deptrac.phar analyze
 
 unit-tests: vendor
 	vendor/bin/phpunit --testsuite unit-tests
@@ -51,7 +51,7 @@ composer-validate:
 	composer validate --no-check-publish
 
 bin/deptrac.phar:
-	curl -LS http://get.sensiolabs.de/deptrac.phar -o bin/deptrac.phar
+	curl -LS https://github.com/sensiolabs-de/deptrac/releases/download/0.8.0/deptrac.phar -o bin/deptrac.phar
 	chmod a+x bin/deptrac.phar
 
 .PHONY: clean
