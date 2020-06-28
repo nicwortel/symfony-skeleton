@@ -12,3 +12,7 @@ vendor/bin/phpcbf || true
 sed -i '/###/d' .gitignore
 sed -i '/^$/d' .gitignore
 sort .gitignore -o .gitignore
+
+# Remove this script
+sed -i '/setup\.sh/d' composer.json
+rm setup.sh
