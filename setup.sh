@@ -5,7 +5,7 @@ sed -i 's/src\//src\/Infrastructure\//g' config/services.yaml
 
 mv src/Controller/ src/Infrastructure/Controller/
 
-rm -f src/Kernel.php
+rm -f src/Kernel.php phpunit.xml.dist
 
 vendor/bin/phpcbf || true
 

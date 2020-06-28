@@ -1,18 +1,4 @@
 {
-    "phpunit/phpunit": {
-        "version": "4.7",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "4.7",
-            "ref": "00fdb38c318774cd39f475a753028a5e8d25d47c"
-        },
-        "files": [
-            ".env.test",
-            "phpunit.xml.dist",
-            "tests/bootstrap.php"
-        ]
-    },
     "squizlabs/php_codesniffer": {
         "version": "3.0",
         "recipe": {
