@@ -1,3 +1,0 @@
-#index:
-#    path: /
-#    controller: Vendor\Project\Infrastructure\Controller\DefaultController::index
