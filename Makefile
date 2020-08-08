@@ -20,8 +20,8 @@ build/$(build_name).tar.gz: $(sources) vendor
 .PHONY: dist
 dist: build/$(build_name).tar.gz
 
-.PHONY: test lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
-test: lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
+.PHONY: check lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
+check: lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
 
 lint: vendor
 	bin/console lint:yaml config/

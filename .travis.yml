@@ -9,4 +9,4 @@ cache:
 
 install: composer install
 
-script: make test
+script: make check

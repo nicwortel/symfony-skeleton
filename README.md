@@ -15,7 +15,7 @@ Run `make` to install dependencies.
 
 ### Running the tests
 
-Run `make test` to execute all available tests.
+Run `make check` to execute all available tests.
 
 ## Building the application
 
