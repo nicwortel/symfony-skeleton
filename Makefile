@@ -32,10 +32,10 @@ static-analysis: vendor bin/deptrac.phar
 	bin/deptrac.phar analyze
 
 unit-tests: vendor
-	vendor/bin/phpunit --testsuite unit-tests
+	vendor/bin/phpunit --testsuite unit
 
 integration-tests: vendor
-	vendor/bin/phpunit --testsuite integration-tests
+	vendor/bin/phpunit --testsuite integration
 
 acceptance-tests: vendor
 	vendor/bin/behat -v --suite=acceptance
