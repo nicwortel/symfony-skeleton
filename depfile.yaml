@@ -16,13 +16,6 @@ layers:
     collectors:
       - type: directory
         regex: src/Infrastructure/.*
-      - type: bool
-        must:
-          - type: className
-            regex: .*\\.*
-        must_not:
-          - type: directory
-            regex: src/.*
 
 ruleset:
   Domain: ~
