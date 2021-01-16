@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Install dependencies with Composer
+        uses: ramsey/composer-install@v1
+
+      - name: Run tests
+        run: make check
