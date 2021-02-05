@@ -17,6 +17,6 @@ Run `make` to install dependencies.
 
 Run `make check` to execute all available tests.
 
-## Building the application
+## Building the Docker image
 
-`make dist` will create a tarball that can be deployed to a server.
+Run `docker-compose build` to build the Docker image.

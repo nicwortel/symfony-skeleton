@@ -1,24 +1,8 @@
-sources = bin/console config public src templates
-version = $(shell git describe --tags --dirty --always)
-build_name = application-$(version)
-build_dir = build/$(build_name)
-
 .PHONY: all
 all: vendor
 
 vendor: composer.json composer.lock
 	composer install
-
-build/$(build_name).tar.gz: $(sources) vendor
-	-rm -rf $(build_dir)
-	mkdir -p $(build_dir)
-	cp --recursive --parents $(sources) vendor composer.* $(build_dir)
-	composer install --working-dir=$(build_dir) --no-dev --optimize-autoloader --no-plugins --no-scripts
-	tar --create --gzip --directory=$(build_dir) --file=$@ $(sources) vendor
-	-rm -rf $(build_dir)
-
-.PHONY: dist
-dist: build/$(build_name).tar.gz
 
 .PHONY: check lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
 check: lint static-analysis unit-tests integration-tests acceptance-tests system-tests coding-standards security-tests composer-validate
